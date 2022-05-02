@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align Self</title>
+
+    <style>
+        .container{
+            display:flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            /* align-items: center; */
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .item{
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .auto{
+            align-self: auto;;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>row</h1>
+    <div class="container align-container">
+        <div class="item auto">A</div>
+        <div class="item auto">BB</div>
+        <div class="item auto">Abubublébubublé comida da vovó taz gosta</div>
+        <div class="item auto">DDDD</div>
+    </div>
+
+    <div class="container">
+        <div class="item center">aaaaAAa</div>
+        <div class="item start">AAAaaaa</div>
+        <div class="item end">aaaaAAa</div>
+        <div class="item stretch">Abubublébubublé comida da vovó taz gosta</div>
+    </div>
+
+    <div class="container align-container">
+        <div class="item auto">A</div>
+        <div class="item auto">BB</div>
+        <div class="item auto">Abubublébubublé comida da vovó taz gosta</div>
+        <div class="item auto">DDDD</div>
+    </div>
+
+    <h1>column</h1>
+    <div class="container align-container column">
+        <div class="item auto">A</div>
+        <div class="item auto">BB</div>
+        <div class="item auto">Abubublébubublé comida da vovó taz gosta</div>
+        <div class="item auto">DDDD</div>
+    </div>
+
+    <div class="container column">
+        <div class="item center">aaaaAAa</div>
+        <div class="item start">AAAaaaa</div>
+        <div class="item end">aaaaAAa</div>
+        <div class="item stretch">Abubublébubublé comida da vovó taz gosta</div>
+    </div>
+
+    <div class="container align-container column">
+        <div class="item auto">A</div>
+        <div class="item auto">BB</div>
+        <div class="item auto">Abubublébubublé comida da vovó taz gosta</div>
+        <div class="item auto">DDDD</div>
+    </div>
+</body>
+</html>
